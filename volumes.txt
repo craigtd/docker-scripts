@@ -1,0 +1,9 @@
+# When a volume exists and is no longer connected to any containers, however, it's called a dangling volume
+
+# List:
+
+docker volume ls -f dangling=true
+
+# Remove:
+
+docker volume rm $(docker volume ls -f dangling=true -q)
