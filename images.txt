@@ -1,0 +1,9 @@
+# Dangling images are layers that have no relationship to any tagged images. They no longer serve a purpose and consume disk space. 
+
+# List:
+
+docker images -f dangling=true
+
+# Remove:
+
+docker rmi $(docker images -f dangling=true -q)
