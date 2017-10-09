@@ -1,3 +1,5 @@
-# Starts up the specified version of mongo with a designated name and IP config. Required if you want to connect using Robomongo or sim
+# Starts up mongo with a designated name and IP config. Required if you want to connect using Robomongo or sim
+docker run -p 127.0.0.1:27017:27017 --name mongo -d mongo
 
-docker run -p 127.0.0.1:27017:27017 --name mongo -d mongo:3.2
+# Starts the specified version of mongo
+docker run -p 127.0.0.1:27017:27017 --name mongo -d mongo:3.2.13 
